@@ -21,11 +21,8 @@ struct CrewView: View {
                             Image(crewMember.astronaut.id)
                                 .resizable()
                                 .frame(width: 104, height: 72)
-                                .clipShape(Capsule())
-                                .overlay(
-                                    Capsule()
-                                        .strokeBorder(.white, lineWidth: 1)
-                                )
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                                .padding(.horizontal)
                             
                             VStack(alignment: .leading) {
                                 Text(crewMember.astronaut.name)
